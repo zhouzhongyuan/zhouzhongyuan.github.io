@@ -1,10 +1,10 @@
 # 车掌柜(无锡大大) iOS 打包信
 
 ## Contents(基本信息)
-* id: com.CarCEO.CarCEO
-* id: com.CarCEO.CarCEO
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
+ Kye        | Value          
+ ------------ | -------------
+ id      | com.CarCEO.CarCEO
+ baidu location ios (com.CarCEO.CarCEO)   | 1xuVCetREsI8B46Fk49My1Elac74mrIn    
+ baidu location android (com.bokesoft.ceo & Keystore)  | 4z5k9DG1QUIBWF9yEfb4Qho6  
+ wechat share ios(com.CarCEO.CarCEO) |wxd370fd102cb18581
