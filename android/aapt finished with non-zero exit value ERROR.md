@@ -1,4 +1,4 @@
-* 开头
+##开头
     今天遇到一个比较特殊的bug。实施人员说,android每次打包都会失败,我去查看了一下错误原因,如下
     
 ![Alt text](../img/aapt-error.png "appt错误信息")
@@ -21,10 +21,11 @@
 
 ```
 
-*想法
- 1.这两天缺失更新了android studio,猜测可能相关的build-tools也进行了更新,然后就一直想办法设置cdvBuildToolsVersion cdvCompileSdkVersion,失败
- 2.cordova版本问题,打包程序所使用的cordova-lib 和 机器上的cordova版本不一致。跟版本没关系
- 3.android-target版本问题,由23改为22,终于报出有用的错误信息
+##想法
+
+ - 1.这两天缺失更新了android studio,猜测可能相关的build-tools也进行了更新,然后就一直想办法设置cdvBuildToolsVersion cdvCompileSdkVersion,失败
+ - 22.cordova版本问题,打包程序所使用的cordova-lib 和 机器上的cordova版本不一致。跟版本没关系
+ - 3.android-target版本问题,由23改为22,终于报出有用的错误信息
  
  ![Alt text](../img/aapt-error.png "有用的错误信息")
  
