@@ -27,7 +27,7 @@
  - 22.cordova版本问题,打包程序所使用的cordova-lib 和 机器上的cordova版本不一致。跟版本没关系
  - 3.android-target版本问题,由23改为22,终于报出有用的错误信息
  
- ![Alt text](../img/aapt-error.png "有用的错误信息")
+ ![Alt text](../img/aapt-error2.png "有用的错误信息")
  
  原来是同事使用了中文的文件名的问题。
  
