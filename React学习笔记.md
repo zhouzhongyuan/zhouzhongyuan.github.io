@@ -15,7 +15,7 @@ Container的作用是:当相关的store变换时,自动更新其state
 
 > Create is used to transform a react class into a container that **updates its state when relevant stores change**. 
 
-```javascript
+```react
 
 import CounterStore  from './CounterStore' //当前文件夹下CounterStore.js是store所在的文件
 import {Component} from 'react';
@@ -27,7 +27,8 @@ class CounterContainer extends Component {
   static getStores() {
     return [CounterStore];
   }
-    /*calculateState:当store变化时,this.state跟着变化。
+    /*calcu
+    lateState:当store变化时,this.state跟着变化。
     * ~~ 此处类似于,this.state.counter = CounterStore.getState()。~~
     * (其实不能写类似this.state.** = **的代码,应该是类似this.setState(counter,CounterStore.getState());)
     */
@@ -43,5 +44,79 @@ class CounterContainer extends Component {
 }
 
 const container = Container.create(CounterContainer);
+
 ```
+ ## 3. Material-UI 中的CircularProgress如何居中?
+ ```react
+                 <CircularProgress
+                     style={{ marginLeft: '50%', left: -20 }}
+                 />
+ ```
+ ## 4. React如何定义一个空的Component?
+ ```react
+  = null;
+ ```
+ ## 5. JSX props should not use .bind()?
+ ### Why not?
+ 因为每次render都会创建一个新的函数,这样会对性能有影响。[More](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
+ ### 如果实在需要bind怎么办呢?
+ TODO
+ ## 6.propTypes的作用什么?
+ 答:指定props中的接受的类型
  
+ [facebook的官方说明](https://facebook.github.io/react/docs/reusable-components.html)
+ 
+如果直接抄写
+ ```javascript  
+ React.createClass({
+     propTypes: {
+         optionalArray: React.PropTypes.array,
+     }
+     ****
+ })
+ ```
+ 类似的代码是会报错的。
+ 
+**正确的方式如下:**
+ 
+ ```javascript
+ class DictPicker extends Component {
+        ****
+ }
+ DictPicker.propTypes = {
+     onChange: React.PropTypes.func.isRequired,
+     label: React.PropTypes.string,
+     controlState: React.PropTypes.object,
+     comp: React.PropTypes.object,
+     title: React.PropTypes.string,
+     children: React.PropTypes.element,
+     selectedValue: React.PropTypes.string
+ };
+ ```
+ 为什么官方的代码不能工作呢?
+ 
+ 答:react13以前可以使用官方的的代码;现在要使用ES7规范的写法。只是写法不同,本质相同。[More](https://github.com/yannickcr/eslint-plugin-react/issues/203)
+ ## 7.Failed propType: Invalid prop `children` supplied to `DictPopup`, expected a single ReactElement. Check the render method of `YESDict`.?
+TODO
+## 8. Required context `muiTheme` was not specified in `List`
+
+  ```error
+  warning.js?8a56:45 Warning: Failed Context Types: Required context `muiTheme` was not specified in `List`. Check the render method of `FluxContainer(DictPicker)`.
+  ```
+  ```
+  ListItem.js?b121:399 Uncaught (in promise) TypeError: Cannot read property 'prepareStyles' of undefined(…)
+  ```
+  中文解释: List的parent Component没有Theme,需要自己添加Theme
+  解决办法:
+  ```javascript  
+   import getMuiTheme from 'material-ui/styles/getMuiTheme';
+   import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+   
+                  <MuiThemeProvider muiTheme={getMuiTheme()}>
+                      <List onTap={(event)=>this.onClick(event)} onValueChange={(v)=>this.onValueChange(v)} >
+                          {
+                              itemList
+                          }
+                      </List>
+                  </MuiThemeProvider>
+  ```
