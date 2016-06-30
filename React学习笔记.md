@@ -97,7 +97,40 @@ const container = Container.create(CounterContainer);
  
  答:react13以前可以使用官方的的代码;现在要使用ES7规范的写法。只是写法不同,本质相同。[More](https://github.com/yannickcr/eslint-plugin-react/issues/203)
  ## 7.Failed propType: Invalid prop `children` supplied to `DictPopup`, expected a single ReactElement. Check the render method of `YESDict`.?
-TODO
+ PropTypes设置不正确。
+ ```react
+ <DictDialog
+     title={this.props.label}
+     comp={comp}
+     onChange={(v) => this.onChange(v)}
+     style={{ left: 0, bottom: 0 }}
+ >
+     <Cell>
+         <CellHeader>
+             <label className="weui_label">{this.props.label}</label>
+         </CellHeader>
+         <CellBody>{state.get('displayValue')}</CellBody>
+         <CellFooter />
+     </Cell>
+     <Divider />
+ </DictDialog>
+ ```
+ 这段代码中DictDialog Component的children包含两个subComponent:Cell和Divider。
+ 那么在设置DictDialog的PropTypes时候应该真么设置:
+  ```react   
+  DictDialog.propTypes = {
+      children: React.PropTypes.array
+  };
+  ```
+  如果DictDialog下面可能是array[Cell,Divider],也可能只有一个[Cell]呢?那么他的proptTypes应该是下面这样的:
+ ```react   
+ DictDialog.propTypes = {
+     children: React.PropTypes.oneOfType([
+         React.PropTypes.array,
+         React.PropTypes.element,
+     ])
+ };
+ ```
 ## 8. Required context `muiTheme` was not specified in `List`
 
   ```error
@@ -120,3 +153,8 @@ TODO
                       </List>
                   </MuiThemeProvider>
   ```
+## 9. JSX 的基本语法规则：遇到 HTML 标签（以 < 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。
+##10. Why code like this {{left: -20}}? 两个"{"?
+第一个"{"是指里面的内容使用javascript解析,第二个"{"代表对象。
+## 10.this.props.children
+this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点

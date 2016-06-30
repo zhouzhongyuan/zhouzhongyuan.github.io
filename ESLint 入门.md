@@ -107,11 +107,23 @@ gulp lint
     "jsx-quotes": ["error", "prefer-double"]
     
 ```
+
+### 检测console.log
+```eslint
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+```
+上述rule的意思是: 检测console行,只检测console.log,不检测console.warn和console.error
+
+```javascript
+
+    "react/jsx-indent":"off",
+    "react/jsx-indent-props":"off"
+
+```
+由于我的eslint 是extend自airbnb,缩进(react/jsx-ident和react/jsx-indent-props)总是提示错误,但是我看了没有什么问题,所以就要覆盖掉原来的rules。上述代码就是关闭检测的意思。
+
 ##遇到的问题
 
 [object-shorthand1](http://eslint.org/docs/rules/object-shorthand) [object-shorthand2](http://stackoverflow.com/questions/36093638/unexpected-block-statement-surrounding-arrow-body)
 
 [no-multiple-empty-lines](http://eslint.org/docs/rules/no-multiple-empty-lines)
-
-
-
