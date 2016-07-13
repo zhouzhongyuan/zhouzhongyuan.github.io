@@ -158,3 +158,5 @@ const container = Container.create(CounterContainer);
 第一个"{"是指里面的内容使用javascript解析,第二个"{"代表对象。
 ## 10.this.props.children
 this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点
+## 11. input 的onChange与onInput功能一样,这是react的bug。
+如果实现标准onChange,需要使用onBlur。[More](https://github.com/facebook/react/issues/3964)
