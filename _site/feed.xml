@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>周中原的网络日志</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://zhouzhongyuan.com/</link>
+    <atom:link href="http://zhouzhongyuan.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 20 Jul 2016 21:33:46 +0800</pubDate>
+    <lastBuildDate>Wed, 20 Jul 2016 21:33:46 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>移动段键盘定制</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;移动端由于输入屏幕较小，输入不太方便。如果能够设计出更合理的软键盘，那么就会增加用户的易用性。例如，在输入数字的时候，软键盘中只有数字，而不需要用户自己去切换；在输入密码的时候，关闭自动大写首字母。input标签的type类型就能简单的自定义软键盘。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;关键知识点&lt;/h2&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;number&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;如上代码，在移动端打开此页面，点击这个input，会出来如下软键盘：&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tel&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;如上代码，在移动端打开此页面，点击这个input，会出来如下软键盘：&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;示例&lt;/h2&gt;
+&lt;p&gt;请手机或者平板打开&lt;a href=&quot;https://zhouzhongyuan.github.io/Soft-keyboard-style/&quot;&gt;此页面&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;总结&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;很多手机都支持tel number search email url，正则除外&lt;/li&gt;
+  &lt;li&gt;不支持的话，对样式表现没什么影响，可以放心使用&lt;/li&gt;
+  &lt;li&gt;对待输入我们一般都是一路off到底，移动web端input标配属性：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;autocapitalize=&quot;off&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; spellcheck=&quot;false&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;一丝姐姐的&lt;a href=&quot;https://github.com/yisibl/blog/issues/3&quot;&gt;为移动而生的 HTML 属性&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.imooc.com/video/10770/0&quot;&gt;AlloyTeam老教授的分享&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mobileinputtypes.com/&quot;&gt;图片&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E5%AE%9A%E5%88%B6.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%94%AE%E7%9B%98%E5%AE%9A%E5%88%B6.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>百度地图iOS错误代码汇总</title>
+        <description>&lt;h1 id=&quot;ios&quot;&gt;百度地图iOS错误代码汇总&lt;/h1&gt;
+
+&lt;p&gt;感觉百度地图的js api,iOS api 的文档是真心很差劲,什么东西都找不到.
+好不容易找到下面一个图片,暂存.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;img/baidu_map_ios_error_code.png&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEiOS%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEiOS%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>怎么样攻击正则表达式</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;相关&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;正则表达式是否存在 DoS漏洞&lt;/li&gt;
+  &lt;li&gt;ReDoS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;概念&lt;/h2&gt;
+&lt;p&gt;正则表达式模式中包含了某些执行起来极其耗时（指数时间）条款，（例如：分组条款中包含重复自身的重复）。这可能导致被攻击者利用发起拒绝服务攻击。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;来源&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://weibo.com/1744667943/DBfnJ32TX&quot;&gt;朴灵的微博&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;npm install时的提示&lt;/p&gt;
+
+&lt;h2 id=&quot;how&quot;&gt;How&lt;/h2&gt;
+&lt;p&gt;在Terminal中输入如下内容&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;time &lt;/span&gt;node -e &lt;span class=&quot;s1&quot;&gt;&#39;/^(a+)+$/.test(&quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaax&quot;)&#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;命令讲解:
+- time 计算script的执行时间
+- node -e, eval 执行后面的代码
+- 单引号内部就是正则的匹配&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;效果&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;CPU占用100%&lt;/li&gt;
+  &lt;li&gt;不会死机&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;如何避免&lt;/h2&gt;
+&lt;p&gt;-执行之前先检测正则表达式,如何检测?&lt;/p&gt;
+
+&lt;h2 id=&quot;more-info&quot;&gt;More info&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/ReDoS&quot;&gt;ReDoS wiki&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.owasp.org/index.php/Regular_expression_Denial_of_Service_-_ReDoS&quot;&gt;Regular expression Denial of Service - ReDoS&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%94%BB%E5%87%BB(ReDoS)%E6%98%AF%E4%BB%80%E4%B9%88.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%94%BB%E5%87%BB(ReDoS)%E6%98%AF%E4%BB%80%E4%B9%88.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>推送服务中转服务器</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;推送服务中转服务器&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;1.为什么&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;ios的推送有apple负责,没有什么问题,基本无需考虑&lt;/li&gt;
+  &lt;li&gt;android的fcm(原来的gcm)在大陆几乎没有办法使用,国产的android系统很多没有Google Play Service,fcm依赖Google Play Service&lt;/li&gt;
+  &lt;li&gt;app有很多,每个app单独映射设备和用户名会增加二次开发人员的工作量。中转服务器 可以映射设备和用户名&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;那么问题来了&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;2.推送服务哪家强?&lt;/h2&gt;
+&lt;p&gt;关于推送,可以看&lt;a href=&quot;https://github.com/android-cn/topics/issues/4&quot;&gt;此讨论&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;httppushbaiducom-&quot;&gt;2.1大公司的:&lt;a href=&quot;http://push.baidu.com/&quot;&gt;百度云推送&lt;/a&gt; 腾讯信鸽&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;信鸽: 连自己的公司的微信和QQ都不用自己的信鸽,so pass&lt;/li&gt;
+  &lt;li&gt;百度:百度自己的主要app全部使用百度云推送;不需要担心以后的支持情况;正在与各大手机厂商谈 常驻后台问题(华为 魅族已经谈妥 小米正在谈)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;httpswwwjpushcn-&quot;&gt;2.2专业做推送的:个推 &lt;a href=&quot;https://www.jpush.cn/&quot;&gt;极光&lt;/a&gt; 云巴&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;个推: 本来对它印象挺好的,经过我半天的研究和看知乎。&lt;strong&gt;这就是个垃圾!!!&lt;/strong&gt;。我自己使用了推送不咋地,广告做得很好,各种水军。我记得知乎的一个讨论里面 好像全是这家的水军。我在等着这家公司什么时候倒闭。&lt;/li&gt;
+  &lt;li&gt;极光: 没用过&lt;/li&gt;
+  &lt;li&gt;云巴:以后可以尝试&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;httpdeveloperhuaweicompush&quot;&gt;2.3手机厂商: 小米推送 &lt;a href=&quot;http://developer.huawei.com/push&quot;&gt;华为推送&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;这类没法使用,如果我使用小米推送,华为手机的用户怎么办?&lt;/p&gt;
+
+&lt;h4 id=&quot;androidhttpshelpaliyuncomdocumentdetail30067html&quot;&gt;2.4为了应付国内伤心病况的android厂商,&lt;a href=&quot;https://help.aliyun.com/document_detail/30067.html&quot;&gt;阿里是这么做的&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;选择: 百度云推送&lt;/p&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;3.百度云推送中转服务器&lt;/h2&gt;
+&lt;p&gt;官方只有Java PHP Python版本,没有nodejs版本。
+本来想着自己封装&lt;a href=&quot;http://push.baidu.com/doc/restapi/restapi&quot;&gt;Rest api&lt;/a&gt;的,但是在论坛一搜,已经有人写了,但是它的有点老了(有4个api没有封装,最主要的是没有批量单播batch_device),我就打算自己&lt;a href=&quot;https://github.com/zhouzhongyuan/bpush-nodejs&quot;&gt;封装一下&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;3.1 如何使用&lt;/h3&gt;
+
+&lt;h5 id=&quot;post&quot;&gt;3.1.1 如下所示,发送POST请求即可&lt;/h5&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/*
+* 发送给所有人
+* */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sendToAll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http://127.0.0.1:4001/baiduPush/pushMsgToAll&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;欢迎&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;@zhongyuan&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//必选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;notification_builder_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;notification_basic_style&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;open_type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://zhouzhongyuan.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;pkg_content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;custom_content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/*
+* 发送给某个用户(的所有设备)
+* */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sendToUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http://127.0.0.1:4001/baiduPush/pushMsgToUser&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;欢迎&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;description&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;@zhongyuan&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//必选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;notification_builder_id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;notification_basic_style&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;open_type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://zhouzhongyuan.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;pkg_content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//可选&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;custom_content&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;key&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;value&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;mi&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/*
+ * 为用户添加设备
+ * */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bindUser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;http://127.0.0.1:4001/baiduPush/bindUser&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;admin&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;channelId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;3614459978666263871&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;channelId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;channelId&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;application/json&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;POST&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id=&quot;app&quot;&gt;3.1.2 app端&lt;/h5&gt;
+&lt;p&gt;安装插件&lt;a href=&quot;https://github.com/zhouzhongyuan/baidu-push-cordova&quot;&gt;baidu-push&lt;/a&gt;
+在登录成功之后,把channelId 和 用户名发送到服务器 bindUser&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;api_key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;tsIG8xQr1r3kuHIfcFOfGfGgWaNkXURv&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;baidu_push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startWork&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;api_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;section-5&quot;&gt;3.2 可以推送的消息类型&lt;/h4&gt;
+&lt;p&gt;请查看&lt;a href=&quot;http://push.baidu.com/doc/restapi/msg_struct&quot;&gt;消息/通知数据格式&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;todo&quot;&gt;TODO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;批量单播batch_device&lt;/li&gt;
+  &lt;li&gt;bindUser&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E6%8E%A8%E9%80%81%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E6%8E%A8%E9%80%81%E4%B8%AD%E8%BD%AC%E6%9C%8D%E5%8A%A1%E5%99%A8.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>当我们谈Retina，我们在谈什么</title>
+        <description>&lt;p&gt;作为一个印刷系的学生，一直想用借助公式和数据，用普通人能听懂的话来解释Apple提出的Retina屏幕。
+想写这篇文章都好几天了，一直没时间写，明天中午吃饭时一定要写上了。&lt;/p&gt;
+
+&lt;p&gt;##Retina屏幕就是视网膜屏幕&lt;/p&gt;
+
+&lt;p&gt;和数码相机类似，人眼也是有分辨率的。当设备的分辨率，大于人眼的分辨率时，这样设备的屏幕，我们称之为Retina屏幕。
+借用知乎的一句话，一切不谈 人眼与设备之间距离 就说Retina屏幕的行为都是耍流氓！&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E5%BD%93%E6%88%91%E4%BB%AC%E8%B0%88Retina-%E6%88%91%E4%BB%AC%E5%9C%A8%E8%B0%88%E4%BB%80%E4%B9%88.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E5%BD%93%E6%88%91%E4%BB%AC%E8%B0%88Retina-%E6%88%91%E4%BB%AC%E5%9C%A8%E8%B0%88%E4%BB%80%E4%B9%88.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>如何注册百度云推送</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;如何注册百度云推送&lt;/h1&gt;
+
+&lt;h2 id=&quot;httppushbaiducom&quot;&gt;打开网址&lt;a href=&quot;http://push.baidu.com/&quot;&gt;百度云推送&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;如下图所示 一步一步来即可&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/2.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/31.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/51.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/6.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/baidu_push/7.png&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;最终需要的就是最后一张图上的:&lt;/h2&gt;
+
+&lt;h3 id=&quot;app-id&quot;&gt;APP ID,&lt;/h3&gt;
+
+&lt;h3 id=&quot;api-key&quot;&gt;API KEY,&lt;/h3&gt;
+
+&lt;h4 id=&quot;secrect-key&quot;&gt;SECRECT KEY&lt;/h4&gt;
+
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E7%99%BE%E5%BA%A6%E4%BA%91%E6%8E%A8%E9%80%81.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E5%A6%82%E4%BD%95%E6%B3%A8%E5%86%8C%E7%99%BE%E5%BA%A6%E4%BA%91%E6%8E%A8%E9%80%81.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>使用命令行打包iOS App遇到的问题</title>
+        <description>&lt;h2 id=&quot;p12&quot;&gt;1. 如何使用命令行导入p12证书&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;security import app证书.p12 -k ~/Library/Keychains/login.keychain -P 1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;app证书.p12:p12文件所在的路径
+1(注释:-P后面的1): p12文件的密码 ## 2. 导入证书之后,每次打包都会弹窗怎么办?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/codesign-error.png&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;手动解决方法如下:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/codesign-deal.png&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;命令行:
+添加证书时 添加参数&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;-T /usr/bin/codesign
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;完整命令如下
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;security import app证书.p12 -k ~/Library/Keychains/login.keychain -P 1 -T /usr/bin/codesign
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;3. 删除证书&lt;/h2&gt;
+&lt;p&gt;http://stackoverflow.com/questions/7678057/remove-private-key-from-mac-os-x-keychain-using-terminal&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%93%E5%8C%85iOS-App%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%89%93%E5%8C%85iOS-App%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/jekyll/update/2016/07/20/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/jekyll/update/2016/07/20/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>webview 中遇到的问题</title>
+        <description>&lt;ol&gt;
+  &lt;li&gt;使用cordova 等生成app时,手指长按会出来系统自带的操作(复制,粘贴等)
+ 全局或者部分div上添加下面的css&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;-webkit-touch-callout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;-webkit-user-select&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* Disable selection/copy in UIWebView */&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/webview-%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/webview-%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+      <item>
+        <title>Mongodb常用命令</title>
+        <description>&lt;p&gt;##Hello,mongo
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+cd mongodb安装位置/bin
+&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+./mongo
+&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+show dbs
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;section&quot;&gt;结构&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|--db
+|----collection
+|------------data
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;datacrud&quot;&gt;data的CRUD&lt;/h3&gt;
+
+&lt;h4 id=&quot;c&quot;&gt;C&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.insert&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appId&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;com.bokesoft.zijiang&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;紫江&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;UUID&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;7921b97f-c7c2-461b-8cc6-bab66f514324&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;read&quot;&gt;R(ead)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.find&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;update&quot;&gt;U(pdate)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.update&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$set&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;移动办公&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;delete&quot;&gt;D(elete)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.remove&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;###collection的CRUD&lt;/p&gt;
+
+&lt;h4 id=&quot;c-1&quot;&gt;C&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.createCollection&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;mobileprovisions&#39;&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; appId: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;,
+                              Name: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;,
+                              UUID: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;read-1&quot;&gt;R(ead)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;update-1&quot;&gt;U(pdate)&lt;/h4&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;d&quot;&gt;D&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.drop()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;help: db.helpC()&lt;/li&gt;
+  &lt;li&gt;dbs： show dbs&lt;/li&gt;
+  &lt;li&gt;CREATE DB : use DATABASE_NAME&lt;/li&gt;
+  &lt;li&gt;进入数据库：use **&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;collections： show collections&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   db.mobileprovisions.find(&quot;Name&quot;:{$not:/^c*/}) //查找Name 不是以c开头的
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;update:&lt;/p&gt;
+
+&lt;p&gt;INSERT
+```mongodb
+({appPackageName:”com.bokesoft.app”,appPlatform:”android”})&lt;/p&gt;
+
+&lt;p&gt;copy collections(tables)&lt;/p&gt;
+
+&lt;p&gt;db.&lt;collection_name&gt;.find().forEach(function(d){ db.getSiblingDB(&#39;&lt;new_database&gt;&#39;)[&#39;&lt;collection_name&gt;&#39;].insert(d); });
+```&lt;/collection_name&gt;&lt;/new_database&gt;&lt;/collection_name&gt;&lt;/p&gt;
+
+&lt;p&gt;CREATE Collection:
+db.createCollection(‘mobileprovisions’, { appId: ‘string’,
+                              Name: ‘string’,
+                              UUID: ‘string’} )&lt;/p&gt;
+
+&lt;h2 id=&quot;more&quot;&gt;More&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/10547118/why-does-mongoose-always-add-an-s-to-the-end-of-my-collection-name&quot;&gt;Why does mongoose always add an s to the end of my collection name&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;https://docs.mongodb.org/getting-started/shell/update/
+https://docs.mongodb.org/manual/core/crud-introduction/
+https://docs.mongodb.org/manual/core/query-optimization/
+https://docs.mongodb.org/manual/reference/method/db.collection.remove/
+https://docs.mongodb.org/manual/reference/operator/query/&lt;/p&gt;
+</description>
+        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/20/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
+    
+  </channel>
+</rss>

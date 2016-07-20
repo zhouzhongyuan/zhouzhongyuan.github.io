@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>React学习笔记</title>
+  <meta name="description" content="1. flux-util中一般会使用到Store,Store中有时会使用到Immutable,immutable常用的方法有```jsvar dictDataPlain  = new Immutable.Map(); //新建set //修改get //获取">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://zhouzhongyuan.com/dependence/2016/07/20/React%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">
+  <link rel="alternate" type="application/rss+xml" title="周中原的网络日志" href="http://zhouzhongyuan.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">周中原的网络日志</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">React学习笔记</h1>
+    <p class="post-meta"><time datetime="2016-07-20T19:53:40+08:00" itemprop="datePublished">Jul 20, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="flux-utilstorestoreimmutable">1. flux-util中一般会使用到Store,Store中有时会使用到Immutable,</h2>
+<p>immutable常用的方法有
+```js
+var dictDataPlain  = new Immutable.Map(); //新建
+set //修改
+get //获取</p>
+
+<p>toJSON() //map转为json,对于调试很有用
+```</p>
+
+<h2 id="flux-utilcalculatestate">2. flux-util中calculateState的作用是什么?调用的时机是什么?</h2>
+<p>calculateState是Container中概念。
+Container的作用是:当相关的store变换时,自动更新其state</p>
+
+<blockquote>
+  <p>Create is used to transform a react class into a container that <strong>updates its state when relevant stores change</strong>.</p>
+</blockquote>
+
+<pre><code class="language-react">
+import CounterStore  from './CounterStore' //当前文件夹下CounterStore.js是store所在的文件
+import {Component} from 'react';
+import {Container} from 'flux/utils';
+
+
+class CounterContainer extends Component {
+    //getStores,顾名思义,获取store
+  static getStores() {
+    return [CounterStore];
+  }
+    /*calcu
+    lateState:当store变化时,this.state跟着变化。
+    * ~~ 此处类似于,this.state.counter = CounterStore.getState()。~~
+    * (其实不能写类似this.state.** = **的代码,应该是类似this.setState(counter,CounterStore.getState());)
+    */
+  static calculateState(prevState) {
+    return {
+      counter: CounterStore.getState(),
+    };
+  }
+
+  render() {
+    return &lt;CounterUI counter={this.state.counter} /&gt;;
+  }
+}
+
+const container = Container.create(CounterContainer);
+
+</code></pre>
+
+<h2 id="material-ui-circularprogress">3. Material-UI 中的CircularProgress如何居中?</h2>
+
+<p><code class="highlighter-rouge">react
+                 &lt;CircularProgress
+                     style=
+                 /&gt;
+</code></p>
+
+<h2 id="reactcomponent">4. React如何定义一个空的Component?</h2>
+
+<p><code class="highlighter-rouge">react
+  = null;
+</code></p>
+
+<h2 id="jsx-props-should-not-use-bind">5. JSX props should not use .bind()?</h2>
+
+<p>### Why not?
+ 因为每次render都会创建一个新的函数,这样会对性能有影响。<a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md">More</a>
+ ### 如果实在需要bind怎么办呢?
+ TODO</p>
+
+<h2 id="proptypes">6.propTypes的作用什么?</h2>
+<p>答:指定props中的接受的类型</p>
+
+<p><a href="https://facebook.github.io/react/docs/reusable-components.html">facebook的官方说明</a></p>
+
+<p>如果直接抄写</p>
+
+<p><code class="highlighter-rouge">javascript  
+ React.createClass({
+     propTypes: {
+         optionalArray: React.PropTypes.array,
+     }
+     ****
+ })
+</code>
+ 类似的代码是会报错的。</p>
+
+<p><strong>正确的方式如下:</strong></p>
+
+<p><code class="highlighter-rouge">javascript
+ class DictPicker extends Component {
+        ****
+ }
+ DictPicker.propTypes = {
+     onChange: React.PropTypes.func.isRequired,
+     label: React.PropTypes.string,
+     controlState: React.PropTypes.object,
+     comp: React.PropTypes.object,
+     title: React.PropTypes.string,
+     children: React.PropTypes.element,
+     selectedValue: React.PropTypes.string
+ };
+</code>
+ 为什么官方的代码不能工作呢?</p>
+
+<p>答:react13以前可以使用官方的的代码;现在要使用ES7规范的写法。只是写法不同,本质相同。<a href="https://github.com/yannickcr/eslint-plugin-react/issues/203">More</a></p>
+
+<h2 id="proptypes-1">7. PropTypes设置不正确</h2>
+
+<pre><code class="language-error">Failed propType: Invalid prop `children` supplied to `DictPopup`, expected a single ReactElement. Check the render method of `YESDict`.?
+</code></pre>
+
+<pre><code class="language-react"> &lt;DictDialog
+     title={this.props.label}
+     comp={comp}
+     onChange={(v) =&gt; this.onChange(v)}
+     style=
+ &gt;
+     &lt;Cell&gt;
+         &lt;CellHeader&gt;
+             &lt;label className="weui_label"&gt;{this.props.label}&lt;/label&gt;
+         &lt;/CellHeader&gt;
+         &lt;CellBody&gt;{state.get('displayValue')}&lt;/CellBody&gt;
+         &lt;CellFooter /&gt;
+     &lt;/Cell&gt;
+     &lt;Divider /&gt;
+ &lt;/DictDialog&gt;
+</code></pre>
+<p>这段代码中DictDialog Component的children包含两个subComponent:Cell和Divider。
+ 那么在设置DictDialog的PropTypes时候应该真么设置:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">DictDialog</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">children</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">array</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+<p>如果DictDialog下面可能是array[Cell,Divider],也可能只有一个[Cell]呢?那么他的proptTypes应该是下面这样的:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">DictDialog</span><span class="p">.</span><span class="nx">propTypes</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="na">children</span><span class="p">:</span> <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">oneOfType</span><span class="p">([</span>
+     <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span>
+     <span class="nx">React</span><span class="p">.</span><span class="nx">PropTypes</span><span class="p">.</span><span class="nx">element</span><span class="p">,</span>
+ <span class="p">])</span>
+<span class="p">};</span>
+</code></pre>
+</div>
+
+<h2 id="required-context-muitheme-was-not-specified-in-list">8. Required context <code class="highlighter-rouge">muiTheme</code> was not specified in <code class="highlighter-rouge">List</code></h2>
+
+<pre><code class="language-error">warning.js?8a56:45 Warning: Failed Context Types: Required context `muiTheme` was not specified in `List`. Check the render method of `FluxContainer(DictPicker)`.
+</code></pre>
+
+<pre><code class="language-error">ListItem.js?b121:399 Uncaught (in promise) TypeError: Cannot read property 'prepareStyles' of undefined(…)
+</code></pre>
+<p>中文解释: List的parent Component没有Theme,需要自己添加Theme
+  解决办法:</p>
+
+<pre><code class="language-react">import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+  &lt;MuiThemeProvider muiTheme={getMuiTheme()}&gt;
+      &lt;List onTap={(event)=&gt;this.onClick(event)} onValueChange={(v)=&gt;this.onValueChange(v)} &gt;
+          {
+              itemList
+          }
+      &lt;/List&gt;
+  &lt;/MuiThemeProvider&gt;
+</code></pre>
+
+<h2 id="jsx-">9. JSX 的基本语法规则：</h2>
+<p>遇到 HTML 标签（以 &lt; 开头），就用 HTML 规则解析；遇到代码块（以 { 开头），就用 JavaScript 规则解析。</p>
+
+<h2 id="why-code-like-this--">10. Why code like this ? 两个”{“?</h2>
+<p>第一个”{“是指里面的内容使用javascript解析,第二个”{“代表对象。</p>
+
+<h2 id="thispropschildren">11.this.props.children</h2>
+<p>this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点</p>
+
+<h2 id="input-onchangeoninputreactbug">12. input 的onChange与onInput功能一样,这是react的bug。</h2>
+<p>如果实现标准onChange,需要使用onBlur。<a href="https://github.com/facebook/react/issues/3964">More</a></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">周中原的网络日志</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>周中原的网络日志</li>
+          <li><a href="mailto:yaewnzhongyuan@gmail.com">yaewnzhongyuan@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/zhouzhongyuan"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">zhouzhongyuan</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/zhouzhongyuan"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">zhouzhongyuan</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
