@@ -122,6 +122,31 @@ gulp lint
 ```
 由于我的eslint 是extend自airbnb,缩进(react/jsx-ident和react/jsx-indent-props)总是提示错误,但是我看了没有什么问题,所以就要覆盖掉原来的rules。上述代码就是关闭检测的意思。
 
+## 常用命令
+```bash
+npm i --save-dev babel-eslint eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react gulp-eslint gulp-if
+```
+## 我的.eslintrc
+```eslintrc
+{
+  "extends": "airbnb",
+  "plugins": ["react"],
+  "parser":"babel-eslint",
+  "rules": {
+    "strict": 0,
+    "indent": ["off", 4],
+    "no-multiple-empty-lines": ["error", { "max": 0, "maxBOF": 0}],
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "always"],
+    "no-cond-assign": ["error", "always"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "react/jsx-indent":"off",
+    "react/jsx-indent-props":"off"
+  }
+}
+```
+rc means running command
 ##遇到的问题
 
 [object-shorthand1](http://eslint.org/docs/rules/object-shorthand) [object-shorthand2](http://stackoverflow.com/questions/36093638/unexpected-block-statement-surrounding-arrow-body)
