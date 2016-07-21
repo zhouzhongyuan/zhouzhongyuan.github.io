@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>周中原的网络日志</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+    <description>关注前端技术:Javascript, Web app, Cordova, React, Backbone
 </description>
     <link>http://zhouzhongyuan.com/</link>
     <atom:link href="http://zhouzhongyuan.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 20 Jul 2016 21:33:46 +0800</pubDate>
-    <lastBuildDate>Wed, 20 Jul 2016 21:33:46 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Jul 2016 09:04:42 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 09:04:42 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>移动段键盘定制</title>
+        <title>移动端键盘定制</title>
         <description>&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
 &lt;p&gt;移动端由于输入屏幕较小，输入不太方便。如果能够设计出更合理的软键盘，那么就会增加用户的易用性。例如，在输入数字的时候，软键盘中只有数字，而不需要用户自己去切换；在输入密码的时候，关闭自动大写首字母。input标签的type类型就能简单的自定义软键盘。&lt;/p&gt;
 
@@ -64,7 +64,7 @@
 &lt;p&gt;感觉百度地图的js api,iOS api 的文档是真心很差劲,什么东西都找不到.
 好不容易找到下面一个图片,暂存.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;img/baidu_map_ios_error_code.png&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/baidu_map_ios_error_code.png&quot; alt=&quot;Alt text&quot; title=&quot;Optional title&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
         <link>http://zhouzhongyuan.com/dependence/2016/07/20/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEiOS%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB.html</link>
