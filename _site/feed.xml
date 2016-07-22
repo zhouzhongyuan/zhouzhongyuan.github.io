@@ -6,9 +6,145 @@
 </description>
     <link>http://zhouzhongyuan.com/</link>
     <atom:link href="http://zhouzhongyuan.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jul 2016 19:43:44 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Jul 2016 19:43:44 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jul 2016 14:48:19 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jul 2016 14:48:19 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Gulp入门</title>
+        <description>&lt;h3 id=&quot;what&quot;&gt;What&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Automate and enhance your workflow&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;自动化 提升工作效率&lt;/p&gt;
+
+&lt;p&gt;没有gulp也能工作,有了gulp能提高效率。&lt;/p&gt;
+
+&lt;h3 id=&quot;why&quot;&gt;WHY&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;项目有文件80个,现要求删除文件中所有非必须的依赖,难道要一个一个修改吗?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;how-copy-from-official-website&quot;&gt;How( copy from official website)&lt;/h3&gt;
+
+&lt;h4 id=&quot;install-gulp-globally&quot;&gt;1. Install gulp globally:&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;If you have previously installed a version of gulp globally, please run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm rm --global gulp&lt;/code&gt;
+to make sure your old version doesn’t collide with gulp-cli.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --global gulp-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;initialize-your-project-directory&quot;&gt;2. Initialize your project directory:&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;install-gulp-in-your-project-devdependencies&quot;&gt;3. Install gulp in your project devDependencies:&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;npm install --save-dev gulp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;create-a-gulpfilejs-at-the-root-of-your-project&quot;&gt;4. Create a &lt;code class=&quot;highlighter-rouge&quot;&gt;gulpfile.js&lt;/code&gt; at the root of your project:&lt;/h4&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;default&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// place code for your default task here&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;run-gulp&quot;&gt;5. Run gulp:&lt;/h4&gt;
+
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;gulp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The default task will run and do nothing.&lt;/p&gt;
+
+&lt;h3 id=&quot;other&quot;&gt;Other&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;gulp: 吞 咽&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;gulpfilejs&quot;&gt;我的gulpfile.js&lt;/h3&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-eslint&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulpIf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp-if&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./js/lib/yes/components/**/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;!js/lib/yes/components/wechat/jweixin-1.0.0.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;js/lib/yes/components&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;lint&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;isFixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;lint-fix&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eslint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulpIf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isFixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;gulpsrcfile&quot;&gt;gulp.src(file)&lt;/h4&gt;
+
+&lt;h6 id=&quot;section&quot;&gt;单个文件&lt;/h6&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;js/lib/yes/components/wechat/jweixin-1.0.0.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&quot;section-1&quot;&gt;多个文件&lt;/h6&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;js/lib/yes/components/wechat/jweixin-1.0.0.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;js/lib/yes/components/wechat/other.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&quot;section-2&quot;&gt;此文件夹下的所有文件文件(不包含子文件夹的)&lt;/h6&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./js/lib/yes/components/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&quot;section-3&quot;&gt;此文件夹下的所有文件文件(包含子文件夹的)&lt;/h6&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./js/lib/yes/components/**/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h6 id=&quot;otherjs&quot;&gt;此文件夹下的所有文件文件,除了other.js&lt;/h6&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./js/lib/yes/components/**/*.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;!other.js&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;gulpdestdest&quot;&gt;gulp.dest(dest)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;dest是目标文件夹,不是文件名称&lt;/li&gt;
+  &lt;li&gt;如果不想生成新的文件,想要直接替换呢? dest 等于src即可。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/gulpjs/gulp/blob/master/docs/API.md&quot;&gt;More&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jul 2016 14:45:40 +0800</pubDate>
+        <link>http://zhouzhongyuan.com/dependence/2016/07/22/Gulp%E5%85%A5%E9%97%A8.html</link>
+        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/22/Gulp%E5%85%A5%E9%97%A8.html</guid>
+        
+        
+        <category>dependence</category>
+        
+      </item>
     
       <item>
         <title>移动端键盘定制</title>
@@ -445,129 +581,6 @@
         <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
         <link>http://zhouzhongyuan.com/dependence/2016/07/20/webview-%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</link>
         <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/webview-%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</guid>
-        
-        
-        <category>dependence</category>
-        
-      </item>
-    
-      <item>
-        <title>Mongodb常用命令</title>
-        <description>&lt;p&gt;##Hello,mongo
-&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
-cd mongodb安装位置/bin
-&lt;/code&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
-./mongo
-&lt;/code&gt;
-&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
-show dbs
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;结构&lt;/h2&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|--db
-|----collection
-|------------data
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;datacrud&quot;&gt;data的CRUD&lt;/h3&gt;
-
-&lt;h4 id=&quot;c&quot;&gt;C&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.insert&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;appId&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;com.bokesoft.zijiang&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;Name&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;紫江&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;UUID&quot;&lt;/span&gt; : &lt;span class=&quot;s2&quot;&gt;&quot;7921b97f-c7c2-461b-8cc6-bab66f514324&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;read&quot;&gt;R(ead)&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.find&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;update&quot;&gt;U(pdate)&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.update&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$set&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;移动办公&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;delete&quot;&gt;D(elete)&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.remove&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;Name:&lt;span class=&quot;s1&quot;&gt;&#39;国资委&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;###collection的CRUD&lt;/p&gt;
-
-&lt;h4 id=&quot;c-1&quot;&gt;C&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.createCollection&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;mobileprovisions&#39;&lt;/span&gt;, &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; appId: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;,
-                              Name: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;,
-                              UUID: &lt;span class=&quot;s1&quot;&gt;&#39;string&#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;read-1&quot;&gt;R(ead)&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;update-1&quot;&gt;U(pdate)&lt;/h4&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;d&quot;&gt;D&lt;/h4&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;db.releases.drop()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;help: db.helpC()&lt;/li&gt;
-  &lt;li&gt;dbs： show dbs&lt;/li&gt;
-  &lt;li&gt;CREATE DB : use DATABASE_NAME&lt;/li&gt;
-  &lt;li&gt;进入数据库：use **&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;collections： show collections&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   db.mobileprovisions.find(&quot;Name&quot;:{$not:/^c*/}) //查找Name 不是以c开头的
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;update:&lt;/p&gt;
-
-&lt;p&gt;INSERT
-```mongodb
-({appPackageName:”com.bokesoft.app”,appPlatform:”android”})&lt;/p&gt;
-
-&lt;p&gt;copy collections(tables)&lt;/p&gt;
-
-&lt;p&gt;db.&lt;collection_name&gt;.find().forEach(function(d){ db.getSiblingDB(&#39;&lt;new_database&gt;&#39;)[&#39;&lt;collection_name&gt;&#39;].insert(d); });
-```&lt;/collection_name&gt;&lt;/new_database&gt;&lt;/collection_name&gt;&lt;/p&gt;
-
-&lt;p&gt;CREATE Collection:
-db.createCollection(‘mobileprovisions’, { appId: ‘string’,
-                              Name: ‘string’,
-                              UUID: ‘string’} )&lt;/p&gt;
-
-&lt;h2 id=&quot;more&quot;&gt;More&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/10547118/why-does-mongoose-always-add-an-s-to-the-end-of-my-collection-name&quot;&gt;Why does mongoose always add an s to the end of my collection name&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;https://docs.mongodb.org/getting-started/shell/update/
-https://docs.mongodb.org/manual/core/crud-introduction/
-https://docs.mongodb.org/manual/core/query-optimization/
-https://docs.mongodb.org/manual/reference/method/db.collection.remove/
-https://docs.mongodb.org/manual/reference/operator/query/&lt;/p&gt;
-</description>
-        <pubDate>Wed, 20 Jul 2016 19:53:40 +0800</pubDate>
-        <link>http://zhouzhongyuan.com/dependence/2016/07/20/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</link>
-        <guid isPermaLink="true">http://zhouzhongyuan.com/dependence/2016/07/20/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html</guid>
         
         
         <category>dependence</category>
